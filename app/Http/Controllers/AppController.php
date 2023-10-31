@@ -31,6 +31,7 @@ class AppController extends Controller
                 'telp' => $request->input('telp'),
                 'email' => $request->input('email'),
                 'instansi' => $request->input('instansi'),
+                'jenis_pengunjung' => $request->input('jenis_pengunjung'),
             ]);
 
             // Optionally, you can return a response to indicate success

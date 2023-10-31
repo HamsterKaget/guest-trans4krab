@@ -465,8 +465,8 @@
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${item.telp}</td>
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${item.email}</td>
                         <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">${item.instansi}</td>
-                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ${item.jenis_pengunjung === 0 ? 'text-blue-500' : 'text-amber-500'}">${item.jenis_pengunjung === 0 ? 'Umum' : 'Job Fair'}</td>
-                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ${item.status === 1 ? 'text-emerald-500' : 'text-red-500'}">${item.status === 1 ? 'sudah masuk' : 'belum masuk'}</td>
+                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ${item.jenis_pengunjung == 0 ? 'text-blue-500' : 'text-amber-500'}">${item.jenis_pengunjung == 0 ? 'Umum' : 'Job Fair'}</td>
+                        <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ${item.status == 1 ? 'text-emerald-500' : 'text-red-500'}">${item.status == 1 ? 'sudah masuk' : 'belum masuk'}</td>
                     </tr>
                 `;
 
@@ -489,7 +489,7 @@
                     const newRowHTML = rowTemplate(item);
                     tbody.insertAdjacentHTML('beforeend', newRowHTML);
                 });
-                generatePaginationControls(data);
+                // generatePaginationControls(data);
             })
             .catch(function (error) {
                 console.error('Error fetching data:', error);
